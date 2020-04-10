@@ -1,0 +1,35 @@
+/*
+    Estilos de plantilla
+*/
+:root {
+    --primary-color:#BA68C8;
+    --primary-color-light:#BA68C8;
+    --primary-color-dark: #9B43AB;
+    --secundary-color: #FFF082;
+    --secundary-color-light: #FFF5A8;
+    --secundary-color-dark: #FFEC61;
+
+    --font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/*
+    Estilos de reset
+*/
+@import './reset.css';
+
+#aboutme{
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.imagen{
+    padding: 50px;
+}
+
+.text{
+    align-self: center;
+}
+
