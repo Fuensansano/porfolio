@@ -2,34 +2,99 @@
     Estilos de plantilla
 */
 :root {
-    --primary-color:#BA68C8;
-    --primary-color-light:#BA68C8;
-    --primary-color-dark: #9B43AB;
-    --secundary-color: #FFF082;
-    --secundary-color-light: #FFF5A8;
-    --secundary-color-dark: #FFEC61;
+  --primary-color: #ba68c8;
+  --primary-color-light: rgba(200, 161, 207, 0.678);
+  --primary-color-dark: #9b43ab;
+  --secundary-color: #fff082;
+  --secundary-color-light: #fff5a8;
+  --secundary-color-dark: rgb(255, 225, 1);
 
-    --font-family: 'Source Sans Pro', sans-serif;
+  --font-family: "Source Sans Pro", sans-serif;
 }
 
+* {
+  font-family: var(--font-family);
+  margin: auto;
+}
 
 /*
     Estilos de reset
 */
-@import './reset.css';
+@import "./reset.css";
 
-#aboutme{
-    border: 3px solid black;
+/*
+    Contenido principal de la web
+*/
+#aboutme {
+  display: grid;
+  grid-template-columns: 35% 35%;
+  /*grid-template-rows: repeat(3, 35%);*/
+  /*grid-auto-flow: column;*/
+  /*grid-auto-flow: row dense;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: 200px;*/
+  grid-gap: 30px 50px;
+  justify-content: center;
+  align-self: center;
 }
 
-.imagen{
-    padding: 50px;
+/*.imagen {
+  /*padding-right: 100px;
+    padding-bottom: 400px;
+  display: grid;
+  grid-gap: 10px 20px;
+
+  height: auto;
+  justify-items: center;
+}*/
+
+.imagen {
+  border-radius: 25%;
+  width: 100%;
+  display: block;
+    /*max-width: 100%;*/
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-items: center;
+  border: 1px solid black;
 }
 
-.text{
-    align-self: center;
+.text {
+  grid-gap: 10px 20px;
+  font-size: 20px;
+  display: grid;
+  align-self: center;
+  max-width: auto;
+  height: auto;
+  margin-right: 20px;
 }
 
+/*
+   Menú
+*/
+
+.menu {
+  background-color: var(--secundary-color-dark);
+  width: 100%;
+  height: 30px;
+  box-shadow: 1px 1px 2px rgba(200, 161, 207, 0.678);
+  margin-bottom: 20px;
+}
+
+.contenedor-enlaces {
+  padding-left: 0px;
+  margin: 0%;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+
+.contenedor-enlaces:hover {
+  color: var(--primary-color-dark);
+}
