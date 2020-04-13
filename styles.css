@@ -2,11 +2,11 @@
     Estilos de plantilla
 */
 :root {
-  --primary-color: #ba68c8;
+  --primary-color: #a29bfe;
   --primary-color-light: rgba(200, 161, 207, 0.678);
-  --primary-color-dark: #9b43ab;
+  --primary-color-dark: #6c5ce7;
   --secundary-color: #fff082;
-  --secundary-color-light: #fff5a8;
+  --secundary-color-light: rgba(255, 234, 167, 0.6);
   --secundary-color-dark: rgb(255, 225, 1);
 
   --font-family: "Source Sans Pro", sans-serif;
@@ -17,9 +17,6 @@
   margin: auto;
 }
 
-body {
-  background-color: var(--secundary-color-light);
-}
 
 /*
     Estilos de reset
@@ -34,13 +31,15 @@ body {
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
-  font-size: 3vw;
+  font-size: 3rem;
   text-transform: uppercase;
+  color: var(--primary-color-dark);
+  text-shadow: 1px 1px 2px black;
 }
 
 #aboutme {
   display: grid;
-  grid-template-columns: 25% 35%;
+  grid-template-columns: 25% 25%;
   grid-gap: 30px 50px;
   justify-content: center;
   align-self: center;
@@ -65,12 +64,16 @@ body {
   align-self: center;
   max-width: auto;
   height: auto;
-  margin-right: 20px;
 }
 
 .text__título {
   color: var(--primary-color);
   text-shadow: 1px 1px 2px black;
+}
+
+.text__enlace {
+  color: var(--primary-color-dark);
+  text-decoration: none;
 }
 /*
    Menú
@@ -82,6 +85,8 @@ body {
   height: 30px;
   box-shadow: 1px 1px 2px rgba(200, 161, 207, 0.678);
   margin-bottom: 20px;
+  position: fixed;
+  top: 0;
 }
 
 .contenedor-enlaces {
@@ -111,7 +116,7 @@ body {
 
 .footer {
   height: 50px;
-  background-color:var(--primary-color-light);
+  background-color:var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
