@@ -8,6 +8,7 @@
   --secundary-color: #fff082;
   --secundary-color-light: rgba(255, 234, 167, 0.6);
   --secundary-color-dark: rgb(255, 225, 1);
+  --inputformulario: violet;
 
   --font-family: "Source Sans Pro", sans-serif;
 }
@@ -16,7 +17,6 @@
   font-family: var(--font-family);
   margin: auto;
 }
-
 
 /*
     Estilos de reset
@@ -85,8 +85,6 @@
   height: 30px;
   box-shadow: 1px 1px 2px rgba(200, 161, 207, 0.678);
   margin-bottom: 20px;
-  position: fixed;
-  top: 0;
 }
 
 .contenedor-enlaces {
@@ -102,13 +100,12 @@
 .contenedor-enlaces__item {
   text-decoration: none;
   color: white;
+  text-shadow: 1px 1px 0px black;
 }
-
 
 .contenedor-enlaces__item:hover {
   color: var(--secundary-color-dark);
 }
-
 
 /*
   Estilos del footer
@@ -116,7 +113,7 @@
 
 .footer {
   height: 50px;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,4 +122,95 @@
 
 .footer__copyright {
   text-align: center;
+}
+
+/*
+Formulario
+*/
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px 1fr 50px;
+  row-gap: 20px;
+  margin: 25%;
+  margin-top: 50px;
+  /*border: 1px solid black;*/
+  align-items: center;
+  padding-bottom: 20px;
+  box-shadow: 1px 1px 10px grey;
+  border-radius: 10px;
+}
+
+.formulario__lado1 {
+  grid-column: 1 / 2;
+  grid-auto-flow: column;
+}
+
+.formulario__lado2 {
+  grid-column: 2 / 3;
+}
+
+.formulario__comentario {
+  grid-column: 1 / 3;
+  width: 80%;
+  outline: none;
+}
+
+.formulario__enviar {
+  grid-column: 1 / 3;
+}
+
+.formulario__input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--inputformulario);
+  font-size: 1em;
+}
+
+.formulario__input:focus {
+  border-bottom: 3px solid var(--inputformulario);
+  color: var(--primary-color-dark);
+}
+
+.formulario__text {
+  outline: none;
+  border-bottom: var(--inputformulario);
+}
+
+.formulario__textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid var(--inputformulario);
+  outline: none;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+.formulario__textarea:focus {
+  border: 2px solid var(--inputformulario);
+  color: var(--primary-color-dark);
+}
+
+.formulario__enviar {
+  width: 25%;
+}
+
+.formulario__boton {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: var(--primary-color-dark);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 3px grey;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: 0;
+}
+
+.formulario__boton:hover {
+  color: black;
+  background-color: var(--secundary-color-dark);
+  transition: background-color 0.3s;
 }
